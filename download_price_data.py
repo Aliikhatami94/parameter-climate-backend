@@ -34,4 +34,3 @@ async def download_price_data():
 
 if __name__ == '__main__':
     asyncio.run(download_price_data())
-    print('Done!')
