@@ -13,6 +13,9 @@ async def download_price_data():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     }
 
+    # Log the start time
+    start = time.time()
+
     # run an asynchronous loop of requests
     for y in year:
         for m in month:
@@ -27,7 +30,8 @@ async def download_price_data():
                 pass
 
     print('Download complete!')
-
+    print(f'Time taken on 1: {time.time() - start}')
 
 if __name__ == '__main__':
     asyncio.run(download_price_data())
+    print('Done!')
